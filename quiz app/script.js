@@ -91,12 +91,22 @@ btn.addEventListener('click',()=>{
     if(quiz < quizData.length){
         loadQuiz();
     }else{
+        if(score>=3){
         container.innerHTML= `
         <img src='https://w7.pngwing.com/pngs/296/544/png-transparent-multicolored-congratulations-dunottar-school-youtube-competition-s-congratulations-icon-miscellaneous-text-logo.png' height=430px width=606px >
 
         <h2>You answered ${score}/${quizData.length} questions correctly</h2>
 
         <button onclick="location.reload()">Re Submit</button>
-    `
+    `}else{
+        container.innerHTML= `
+        <img src='https://media.istockphoto.com/id/1292394543/vector/cartoonish-puppy-and-a-lettering-phrase-oops-the-funny-dog-made-a-prank-with-a-box.jpg?s=612x612&w=0&k=20&c=YRCvEdccI4mIbZvfPIaFXNB19M7veSbkT16eCuMXalQ=' height=430px width=606px >
+
+        <h2>You answered ${score}/${quizData.length} questions correctly</h2>
+
+        <button onclick="location.reload()">Re Submit</button>
+    ` 
+    }
     }
 })
+
